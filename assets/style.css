@@ -16,6 +16,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #333;
+    color: white;
     padding: 10px 20px;
     position: fixed;
     top: 0;
@@ -159,18 +160,6 @@ body {
     align-items: center;
     height: 100vh;
 }
-        .translate-button {
-            background-color: #3498db;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .translate-button:hover {
-            background-color: #2980b9;
-        }
 
 /* Media Queries */
 /* Mobile Styles */
