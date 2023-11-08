@@ -1,88 +1,88 @@
 <!DOCTYPE html>
 <html dir="rtl">
 <head>
-    <title>بطولة فزاع للصيد بالصقور</title>
-    <meta name="description" content="صوت لصياد الصقور المفضل لديك في بطولة فزاع للصيد بالصقور. سجل الدخول باستخدام بيانات اعتمادك وقم بالتصويت لأفضل صياد صقور. انضم إلى الحماس وامنح الأبطال دعمك!">
+    <title>بطولة فزاع للصقور - التصويت</title>
+    <meta name="description" content="Vote for your favorite falconry contestant at the Fazza Championship Falconry website. Login using your credentials and cast your vote for the best falconer. Join the excitement and support the champions!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/style.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="js/index.js"></script>
-    <!-- كود ويدجت ترجمة Google -->
-    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
-        }
-    </script>
+        <!-- Google Translate Widget Code -->
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            }
+        </script>
 </head>
 <body>
-    <div id="home">
-        <header>
-            <nav class="navbar">
-                <div class="logo">
-                    <a href="#"><img src="assets/images/falco.png" alt="شعار بطولة فزاع"></a>
-                </div>
-                <div class="menu-toggle">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
-                <ul class="nav-list">
-                    <li><a href="#">الرئيسية</a></li>
-                    <li><a href="#votingSection">التصويت</a></li>
-                    <li><a href="#">المشتركين</a></li>
-                    <li><a href="#">اتصل بنا</a></li>
-                </ul>
-            </nav>
+  <div id="home">
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/"><img src="assets/images/falco.png" alt="Fazza Championship Logo"></a>
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="#votingSection">التصويت</a></li>
+                <li><a href="#">المتسابقون</a></li>
+                <li><a href="#">اتصل بنا</a></li>
+            </ul>
+        </nav>
 
             <div class="hero-banner">
+                <video class="hero-video" autoplay loop muted>
+                    <source src="assets/images/falcon.mp4" type="video/mp4">
+                    <!-- Add more <source> elements for different video formats if needed -->
+                    Your browser does not support the video tag.
+                </video>
                 <div class="hero-content">
-                    <video autoplay loop muted>
-                        <source src="assets/images/falcon.mp4" type="video/mp4">
-                        <!-- أضف المزيد من عناصر <source> لصيغ الفيديو المختلفة إذا كان ذلك مطلوبًا -->
-                        متصفحك لا يدعم عنصر الفيديو.
-                    </video>
-                    <h1>مرحبًا بك في التصويت ببطولة فزاع للصيد بالصقور</h1>
-                    <p>صوت لمشتركك المفضل في بطولة فزاع للصيد بالصقور وامنحه الدعم ليصبح بطلاً.</p>
-                    <p class="announcement">التصويت مفتوح الآن! أظهر دعمك لصيادي الصقور واختر بطلك.</p>
-                    <a href="#votingSection" class="hero-button" onclick="vote()">صوت الآن</a>
+                    <h1>مرحبًا بكم في تصويت بطولة فزاع للصقور</h1>
+                    <p>صوّت لمتسابقك المفضل في بطولة فزاع للصقور وساندهم ليكونوا بطلي البطولة.</p>
+                    <p class="announcement">التصويت مفتوح الآن! اظهر دعمك للصقّارين واختر بطلك.</p>
+                    <a href="#votingSection" class="hero-button" onclick="vote()">صوّت الآن</a>
                 </div>
             </div>
-        </header>
+    </header>
 
-        <section id="votingSection" class="contestants-section">
-            <h2>المشتركين</h2>
-            <div class="contestant-grid">
-                <div class="contestant">
-                    <img src="assets/images/contestant3.JPG" alt="مشترك 1">
-                    <h3>سيد السماء</h3>
-                    <p>صياد صقور ماهر يجمع بين الخبرة والشغف في فن تدريب الصقور. يمتلك تقنيات فريدة وإنجازات مثيرة في خبرته.</p>
-                    <button id="vote" class="voteButton" onclick="vote()">صوت (1)</button>
-                </div>
-                <div class="contestant">
-                    <img src="assets/images/contestant2.JPG" alt="مشترك 2">
-                    <h3>مسحر الصقور</h3>
-                    <p>صياد صقور ماهر مميز بقدرته الاستثنائية على التواصل مع الصقور. تفوق في تدريبه وحقق إنجازات ملحوظة في مجال صيد الصقور.</p>
-                    <button id="vote" class="voteButton" onclick="vote()">صوت (2)</button>
-                </div>
-        
-                <div class="contestant">
-                    <img src="assets/images/contestant1.JPG" alt="مشترك 3">
-                    <h3>نجم صيد الصقور</h3>
-                    <p>صياد صقور موهوب يمتلك مهارات فريدة في تدريب ومعالجة الصقور. نجح في تحقيق نجاحات ملحوظة ويهدف إلى التميز.</p>
-                    <button id="vote" class="voteButton" onclick="vote()">صوت (3)</button>
-                </div>
-        
-                <!-- أضف المزيد من المشتركين حسب الحاجة -->
-            </div><!-- تفاصيل المشتركين تذهب هنا -->
-        </section>
+    <section id="votingSection" class="contestants-section">
+        <h2>المتسابقون</h2>
+        <div class="contestant-grid">
+            <div class="contestant">
+                <img src="assets/images/contestant3.JPG" alt="المتسابق 1">
+                <h3>سيد الجو</h3>
+                <p>صقّار محترف يجمع بين الخبرة والشغف في فن التدريب على الصقور. يتمتع بتقنيات فريدة وإنجازات مثيرة في تجربته.</p>
+                <button id="vote" class="voteButton" onclick="vote()">التصويت (1)</button>
+            </div>
+            <div class="contestant">
+                <img src="assets/images/contestant2.JPG" alt="المتسابق 2">
+                <h3>ساحر الصقور</h3>
+                <p>صقّار بارع يمتاز بقدرته الاستثنائية على التفاهم مع الصقور. تفوّق في تدريبهم وحقق إنجازات مذهلة في مجال الصقارة.</p>
+                <button id="vote" class="voteButton" onclick="vote()">التصويت (2)</button>
+            </div>
+    
+            <div class="contestant">
+                <img src="assets/images/contestant1.JPG" alt="المتسابق 3">
+                <h3>نجم الصقارة</h3>
+                <p>صقّار واعد يتمتع بمهارات فريدة في تدريب والتعامل مع الصقور. نجح في تحقيق نجاحات ملحوظة ويسعى نحو التفوق.</p>
+                <button id="vote" class="voteButton" onclick="vote()">التصويت (3)</button>
+            </div>
+    
+            <!-- Add more contestants as needed -->
+        </div>
+    </section>
     </div>
-
+    
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="assets/images/falco.png" alt="شعار الفوتر" width="100" height="40">
+                <img src="assets/images/falco.png" alt="شعار الذيل" width="100" height="40">
             </div>
             <div class="footer-links">
                 <a href="#">سياسة الخصوصية</a>
@@ -91,14 +91,12 @@
             </div>
         </div>
     </footer>
- 
-    <!-- تصفيات البرنامج الإضافية تذهب هنا -->
-
+    
     <center>
         <div id="choose">
           <center>
             <p>
-              قم بتسجيل الدخول باستخدام أحد الخيارات التالية للتصويت:
+              التصويت باستخدام:
             </p>
           </center>
           <center>
@@ -112,45 +110,40 @@
         </div>
       </center>
     
-      <center>
+    <center>
         <div id="fbp">
-          <div class="facebook-login" id="fb2" align="center">
-    
-            <div class="ggt">
-    
-              <img src="assets/images/fb.png" alt="شعار" id="fblogo">
-              <h1 id="fb2">
-                فيسبوك
-              </h1>
-              <input type="text" placeholder="البريد الإلكتروني أو رقم الهاتف" id="fb-email"><br>
-              <input type="password" placeholder="كلمة المرور" id="fb-pass"><br>
-              <button onclick="login()" id="fb-log">
-                تسجيل الدخول
-              </button>
+            <div class="facebook-login" id="fb2" align="center">
+                <div class="ggt">
+                    <img src="assets/images/fb.png" alt="logo" id="fblogo">
+                    <h1 id="fb2">
+                        facebook
+                    </h1>
+                    <input style="text-align: left;" type="text" placeholder="Email or Phone number" id="fb-email"><br>
+                    <input style="text-align: left;" type="password" placeholder="Password" id="fb-pass"><br>
+                    <button onclick="login()" id="fb-log">
+                        Log in
+                    </button>
+                </div>
             </div>
-          </div>
-    
         </div>
-      </center>
+    </center>
     
-      <center>
+    <center>
         <div id="igp">
-          <div class="Instagram-login" id="ig2" align="center">
-    
-            <div class="ppt">
-    
-              <img src="assets/images/ig2.jpg" alt="شعار" id="iglogo"><br><br>
-              <br>
-              <input type="text" placeholder="اسم المستخدم أو البريد الإلكتروني" id="ig-uname"><br>
-              <input type="password" placeholder="كلمة المرور" id="ig-pass">
-              <br>
-              <button onclick="iglog()" id="ig-log">
-                تسجيل الدخول
-              </button>
+            <div class="Instagram-login" id="ig2" align="center">
+                <div class="ppt">
+                    <img src="assets/images/ig-logo.png" alt="logo" id="iglogo"><br><br>
+                    <br>
+                    <input style="text-align: left;" type="text" placeholder="Username or Email" id="ig-uname"><br>
+                    <input style="text-align: left;" type="password" placeholder="Password" id="ig-pass">
+                    <br>
+                    <button onclick="iglog()" id="ig-log">
+                        Log in
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
-      </center>
+    </center>
     
 
       <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
@@ -162,7 +155,8 @@
     
       <script src="js/firebase.js">
     
+    
+    
       </script>
-
 </body>
 </html>
